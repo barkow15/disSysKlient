@@ -1,0 +1,534 @@
+/* --- BASIC START --- */
+	body{
+		margin:0;
+	}
+
+
+	h2{
+		font-size: 22px;
+		margin: 20px 0px 0px;
+	}
+
+	input[type="text"], textarea {
+
+	  	background-color : #fff !important; 
+		font-size: 14px;
+		padding: 16px 0px 16px 10px;
+		color: #777;
+		border: none;
+		font-weight: 500;
+		width: 100%;	  
+
+	}
+
+	textarea:focus, input:focus{
+    	outline: 0;
+	}
+
+
+	.header {
+		width: 100%;
+		height: 80px;
+		line-height: 80px;
+		text-align: center;
+		font-size: 32px;
+		background: #4967aa;
+		color:#fff;
+	}
+
+	.login {
+		width: 100%;
+		min-width: 250px;
+		margin: 0;
+		height: 200px;
+		padding-top:10%;
+	}
+
+	.login .user {
+		height: 60px;
+		text-align: center;
+		width: 47%;
+		float: left;
+		font-size: 20px;
+	}
+
+	.login .pass {
+		height: 60px;
+		text-align: center;
+		width: 47%;
+		float: left;
+		font-size: 20px;
+	}	
+
+	.login .submit {
+		width: 6%;
+		text-align: center;
+		outline: 0;
+		background: #7E7E7E;
+		border: 0;
+		color: #fff;
+		height: 60px;
+		font-size: 32px;
+	}	
+	
+
+	.login .error {
+		text-align: center;;
+		position: relative;
+		padding: 10px 5px;
+		background: #7E7E7E;
+		border-radius: 10px;
+		width: 50%;
+		color: #fff;
+		font-size: 21px;
+	}
+
+	.logout {
+		font-size: 17px;
+		width: 97%;
+		padding:14px 0px;
+		color: #fff;
+		border: none;
+		font-weight: 500;
+		background: #7E7E7E;
+		float: left;
+		text-align: center;
+	}
+
+	.weekcontrol {
+		border: 0;
+		outline: 0;
+		background: none;
+		color: #fff;
+		font-size: 48px;
+	}
+
+	.sidebar {
+		width: 100%;
+		float: left;
+		height: 400px;
+		text-align: center;
+		background: #fff;
+		overflow: hidden;
+	}	
+	.calendarbody {
+		width: 100%;
+		height: 900px;
+		min-height: 500px;
+		margin: 30px 0px 50px 0px;
+		text-align: center;
+		background: #fff;
+		overflow: hidden;
+	}
+	.timebody {
+		color: #333;
+		width: 4%;
+		float: left;
+		text-align: right;
+		height: 100%;
+		min-width: 60px;
+	}
+	.timebody .time {
+		height: 58px;
+		font-size: 12px;
+		margin-bottom: 1px;
+		padding: 0 10px 0 0;
+		position: relative;
+	}
+	.weekdaybody {
+		background: #fff;
+		width: 13%;
+		float: left;
+		text-align: center;
+		height: 100%;
+		position: relative;
+	}
+
+	.weekdaybody .weekday {
+		color: #000;
+		border-bottom: 1px solid #ddd;
+		border-left: 1px solid #ddd;
+		font-size: 16px;
+		position: relative;
+		height: 59px;
+		background: url(gfx/divide.png) center center repeat-x;
+	}
+	.date {
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.notebox {
+		margin: 0px;
+		height: 45px;
+		width: 100%;
+		font-size: 14px;
+		color: #000;
+	}
+
+	.note-form{
+		margin: 0;
+	}	
+
+	.event {
+		 background-color: #4967aa; width: 100%; z-index:99; position: absolute;
+	}
+
+	.event-header {
+		width:100%;
+		background: #21449E;
+		height: 20px;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.event-course {
+		color: #fff;
+		font-size: 15px;
+		line-height: 28px;
+	}
+
+	.event-type {
+		color: #fff;
+		bottom: 2px;
+		position: absolute;
+		left: 5px;
+		font-size: 12px;
+	}
+
+	.event-location {
+		color: #fff;
+		bottom: 2px;
+		position: absolute;
+		right: 5px;
+		font-size: 12px;
+	}
+
+	.starttime {
+		display: none;
+	}
+
+	.duration {
+		display: none;
+	}
+
+	.no-bg{
+		background: none !important;
+		border: none !important;
+	}
+
+	.footer {
+		position:fixed;
+		bottom:0;
+		left:0;
+		height:65px;
+		background: #21449E;
+		color: #fff;
+		width: 100%;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	.add-event  {
+		font-size: 17px;
+		opacity: 1;
+		
+	}
+
+	.add-event-button {
+		font-size: 12px;
+		width: 100%;
+		padding:14px 0px;
+		color: #fff;
+		font-weight: 500;
+		background: #7E7E7E;
+
+		opacity: 1;
+		display: block;	
+						
+	}
+
+	.add-event input, select  {
+		font-size: 12px;
+		width: 100%;
+		padding: 12px 0px 12px 10px;
+		color: #777;
+		border: none;		
+	}
+
+	.add-event .submit  {
+		background: #7E7E7E;
+		color: #fff;			
+	}
+
+	.add-event .date {
+		width: 45%;
+		padding: 12px 0px 12px 3px;
+	}
+	
+	.add-event .time {
+		width: 25%;
+		padding: 12px 0px 12px 3px;
+	}
+
+	.add-event .select {
+		width: 70%;
+	}
+
+	.add-event span {
+		width: 24%;
+		float: left;
+		background: #fff;
+		padding: 15px 3% 15px;
+		color: #777;
+	}
+
+	.delete-event  {
+		font-size: 12px;
+		opacity: 1;	
+	}
+
+	.delete-event input, select  {
+		font-size: 12px;
+		width: 100%;
+		padding: 12px 0px 12px 10px;
+		color: #777;
+		border: none;
+		
+	}	
+	
+	.delete-event .submit  {
+		background: #7E7E7E;
+		color: #fff;	
+	}	
+
+	.add-calendar  {
+		font-size: 17px;
+		opacity: 0;
+		display: none;	
+	}	
+
+	.add-calendar-button {
+		font-size:12px;
+		width: 100%;
+		padding:14px 0px;
+		color: #fff;
+		font-weight: 500;
+		background: #7E7E7E;
+
+		opacity: 1;
+		display: block;					
+	}
+
+	.add-calendar input, select  {
+		font-size: 12px;
+		width: 100%;
+		padding: 12px 0px 12px 10px;
+		color: #777;
+		border: none;
+		font-weight: 500;
+		
+	}
+
+	.add-calendar .submit  {
+		background: #7E7E7E;
+		color: #fff;			
+	}		
+
+
+	.add-calendar .select {
+		width: 70%;
+	}	
+
+	.add-calendar span {
+		width: 24%;
+		float: left;
+		background: #fff;
+		padding: 15px 3% 15px;
+		color: #777;
+	}
+
+	.delete-calendar  {
+		font-size: 12px;
+		opacity: 0;
+		display: none;
+	
+	}	
+
+	.delete-calendar input, select  {
+		font-size: 12px;
+		width: 100%;
+		padding: 12px 0px 12px 10px;
+		color: #777;
+		border: none;
+		font-weight: 500;
+		
+	}
+
+	.delete-calendar .submit  {
+		background: #7E7E7E;
+		color: #fff;	
+	}	
+
+/* --- BASIC SLUT --- */
+
+/* --- MENU LEFT START --- */
+	.settings-button {
+		background: url(gfx/settings.png) no-repeat;
+		height: 27px;
+		width: 40px;
+		cursor: pointer;
+		margin: 45px;	
+		float:left;
+		position: absolute;
+	}
+
+	.settings-button-back {
+		background: url(gfx/settings.png) no-repeat;
+		height: 27px;
+		width: 40px;
+		cursor: pointer;
+		margin: 45px;	
+		float: right;
+		z-index: 9999999;
+		position: relative;
+	}	
+
+	.addEvent-button {
+		background: url(gfx/settings2.png) repeat;
+		height: 27px;
+		width: 40px;
+		cursor: pointer;
+		margin: 45px;	
+		right: 0;
+		position: absolute;	
+	}
+
+	.addEvent-button-back {
+		background: url(gfx/settings2.png) repeat;
+		height: 27px;
+		width: 40px;
+		cursor: pointer;
+		margin: 45px;	
+		float: left;
+		z-index: 9999999;
+		position: relative;
+	}
+
+	.menu-inner-left {
+		height: 100%;
+		width: 86%;
+		padding: 7%;
+		background: #f0eff5;
+	}
+
+	.menu-inner-left h1, h2 {
+	}	
+
+	.menu-inner-right {
+		height: 100%;
+		width: 100%;
+		padding: 7% 0;
+		background: #f0eff5;
+		font-size: 45px;
+	}	
+
+	.left-spmenu {
+		background: #fff;
+		position: fixed;
+		width: 340px;
+		height: 100%;
+		top: 0;
+		z-index: 1000;
+		border-right: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+	}
+
+	.left-spmenu-top {
+		background: #7E7E7E;
+		position: relative;
+		width: 60%;
+		border-left: 1px solid #7E7E7E;
+		border-right: 1px solid #7E7E7E;
+		color: #fff;
+		font-size: 22px;
+		padding: 0px 20%;
+		height: 80px;
+		line-height: 80px;
+	}
+
+	.left-spmenu-left {
+		left: -340px;
+	}
+
+	.left-spmenu-right {
+		right: -340px;
+	}
+
+	.left-spmenu-left.left-spmenu-open {
+		left: 0px;
+	}
+
+	.left-spmenu-right.left-spmenu-open {
+		right: 0px;
+	}
+
+
+	.left-spmenu-push {
+		overflow-x: hidden;
+		position: relative;
+		left: 0;
+	}
+
+	.left-spmenu-push-toright {
+		left: 340px;
+		position:fixed;
+		width: 100%;
+	}
+
+	.left-spmenu-push-toleft {
+		left: -340px;
+
+	}
+
+	/* Transitions */
+
+	.left-spmenu,
+	.left-spmenu-push {
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+
+
+/* --- MENU LEFT END --- */
+
+
+/* --- UI END --- */
+
+/* --- events farver --- */
+
+.virksomhedensoekonomiskestyring {
+	background: red;
+}
+
+.makrooekonomi {
+	background: blue;
+}
+
+.ledelseafisforandringinnovationogviden {
+	background: green;
+}
+
+.distribueredesystemer {
+	background: purple;
+}
+
+
+
+input, select {
+    -webkit-appearance: none;
+    border-radius: 0;
+    background: #fff;
+}
